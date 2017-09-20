@@ -17,6 +17,7 @@ public class Suggestion {
     public Sport sport;
 
     public class Comfort {
+        @SerializedName("txt")
         public String info;
     }
 

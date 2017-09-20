@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by D22395 on 2017/9/20.
+ *
  */
 
 public class Suggestion {
@@ -16,17 +17,17 @@ public class Suggestion {
 
     public Sport sport;
 
-    public class Comfort {
+    private class Comfort {
         @SerializedName("txt")
         public String info;
     }
 
-    public class CarWash {
+    private class CarWash {
         @SerializedName("txt")
         public String info;
     }
 
-    public class Sport {
+    private class Sport {
         @SerializedName("txt")
         public String info;
     }

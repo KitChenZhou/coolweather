@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by D22395 on 2017/9/20.
+ *
  */
 
 public class Now {
@@ -15,7 +16,7 @@ public class Now {
     public More more;
 
 
-    public class More {
+    private class More {
         @SerializedName("txt")
         public String info;
     }

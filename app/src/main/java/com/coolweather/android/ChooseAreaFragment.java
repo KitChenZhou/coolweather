@@ -3,6 +3,7 @@ package com.coolweather.android;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,8 +32,6 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class ChooseAreaFragment extends Fragment {
-
-    private static final String TAG = "ChooseAreaFragment";
 
     public static final int LEVEL_PROVINCE = 0;
 
@@ -237,7 +236,7 @@ public class ChooseAreaFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 // 通过runOnUiThread()方法回到主线程处理逻辑
                 getActivity().runOnUiThread(new Runnable() {
                     @Override

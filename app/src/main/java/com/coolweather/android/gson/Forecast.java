@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by D22395 on 2017/9/20.
- *
  */
 
 public class Forecast {
@@ -17,12 +16,12 @@ public class Forecast {
     @SerializedName("cond")
     public More more;
 
-    private class Temperature {
+    public class Temperature {
         public String max;
         public String min;
     }
 
-    private class More {
+    public class More {
         @SerializedName("txt_d")
         public String info;
     }

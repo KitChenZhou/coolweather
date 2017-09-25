@@ -16,6 +16,9 @@ public class Suggestion {
 
     public Sport sport;
 
+    @SerializedName("uv")
+    public UV uv;
+
     public class Comfort {
         @SerializedName("txt")
         public String info;
@@ -27,6 +30,12 @@ public class Suggestion {
     }
 
     public class Sport {
+        @SerializedName("txt")
+        public String info;
+    }
+
+    public class UV {
+        public String strength;
         @SerializedName("txt")
         public String info;
     }

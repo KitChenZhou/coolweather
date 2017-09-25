@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by D22395 on 2017/9/20.
  */
 
+
 public class Forecast {
 
     public String date;
@@ -27,5 +28,12 @@ public class Forecast {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "Forecast{" +
+                "date='" + date + '\'' +
+                ", temperature=" + temperature +
+                ", more=" + more +
+                '}';
+    }
 }

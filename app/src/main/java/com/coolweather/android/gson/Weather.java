@@ -12,6 +12,7 @@ public class Weather {
 
     public String status;
 
+    @SerializedName("basic")
     public Basic basic;
 
     public AQI aqi;

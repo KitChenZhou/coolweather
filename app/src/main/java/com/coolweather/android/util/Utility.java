@@ -12,6 +12,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+/**
+ * 处理和解析JSON格式的数据
+ */
 public class Utility {
 
 
@@ -19,9 +23,14 @@ public class Utility {
      * 将返回的JSON数据解析成Weather实体类
      */
     public static Weather handleWeatherResponse(String response) {
+        /*
+         * 由String --> JSONObject格式
+         * 由JSONObject --> JSONArray格式
+         * 由JSONArray --> String格式
+         */
         try {
             JSONObject jsonObject = new JSONObject(response);
-            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather5");
             String weatherContent = jsonArray.getJSONObject(0).toString();
             return new Gson().fromJson(weatherContent, Weather.class);
         } catch (Exception e) {
@@ -32,6 +41,8 @@ public class Utility {
 
     /**
      * 解析和处理服务器返回的省级数据
+     *
+     * 从服务器中获取数据并存入数据库中
      */
     public static boolean handleProvinceResponse(String response) {
         if (!TextUtils.isEmpty(response)) {

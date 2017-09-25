@@ -8,9 +8,9 @@ public class City extends DataSupport {
 
     private String cityName;
 
-    private int cityCode;
+    private int cityCode;// 市的代号
 
-    private int provinceId;
+    private int provinceId; // 记录当前市所属省的id值
 
     public int getId() {
         return id;
